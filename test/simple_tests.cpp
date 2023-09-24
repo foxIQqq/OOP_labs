@@ -1,19 +1,18 @@
 #include <gtest/gtest.h>
 #include <iostream>
-#include <vector>
-#include "func.h"
-#include "back.h"
-#include "valid.h"
+#include <bitset>
+#include "dec_bin_convertion.h"
+#include "validation.h"
 
 TEST(HelloTest, PositiveInteger) {
   // arrange 
   int n = 1;
-  int dec = 0;
-  std::vector<int> ans(32);
+  unsigned long long dec = 0;
+  std::bitset<32> ans;
 
   // act
   ans = dec_to_bin(n);
-  dec = back_to_dec(ans);
+  dec = bin_to_dec(ans);
 
   // assert
   EXPECT_EQ(dec, n);
@@ -27,5 +26,5 @@ TEST(HelloTest, Invalid_Arg) {
 
 
   // assert
-  EXPECT_THROW(invalid_data(n), std::invalid_argument);
+  EXPECT_THROW(invalid_data(n), std::out_of_range);
 }
