@@ -1,14 +1,12 @@
 #include <gtest/gtest.h>
-#include <iostream>
 #include <bitset>
 #include "dec_bin_convertion.h"
-#include "validation.h"
 
 TEST(HelloTest, PositiveInteger) {
   // arrange 
   int n = 1;
   unsigned long long dec = 0;
-  std::bitset<32> ans;
+  bitset<32> ans;
 
   // act
   ans = dec_to_bin(n);
@@ -26,5 +24,5 @@ TEST(HelloTest, Invalid_Arg) {
 
 
   // assert
-  EXPECT_THROW(invalid_data(n), std::out_of_range);
+  EXPECT_THROW(invalid_data(n), out_of_range);
 }
