@@ -1,6 +1,10 @@
 #pragma once
 #include <bitset>
 
-std::bitset<32> dec_to_bin(long n);
+using namespace std;
 
-unsigned long long bin_to_dec(std::bitset<32> a);
+bitset<32> dec_to_bin(long n);
+
+unsigned long long bin_to_dec(bitset<32> a);
+
+bool invalid_data(long n);

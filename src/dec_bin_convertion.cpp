@@ -1,7 +1,5 @@
-#include <iostream>
 #include <bitset>
 #include "dec_bin_convertion.h"
-using namespace std;
 
 bitset<32> dec_to_bin(long n) {
     bitset<32> answer(n);

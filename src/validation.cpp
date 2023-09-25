@@ -1,8 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "validation.h"
-
-using namespace std;
+#include "dec_bin_convertion.h"
 
 bool invalid_data(long n) {
     if (n <= 0 || n > lround((2, 32))) {
