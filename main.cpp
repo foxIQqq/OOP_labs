@@ -1,19 +1,20 @@
-#include <iostream>
-#include <vector>
-#include "func.h"
-#include "valid.h"
-#include "back.h"
-
-using namespace std;
+#include "hex.h"
 
 int main() {
-    long n;
-    cout << "Enter your number:" << '\n';
-    cin >> n;
-    invalid_data(n);
-    vector<int> ans = dec_to_bin(n);
-    for (int elem : ans) {
-        cout << elem;
-    }
-    cout << endl;
+    using Hex = form::Hex;
+    Hex a, b, c;
+    std::cout << "Enter your numbers:" << std::endl;
+    std::cin >> a >> b;
+    std::cout << "Sum: " << (a + b) << std::endl;
+    
+    std::cout << "Diff: " << (a - b) << std::endl;
+
+    std::cout << "Copy (first number): " << (c = a) << std::endl;
+
+    std::cout << "Equal: " << (a == b) << std::endl;
+
+    std::cout << "Less: " << (a < b) << std::endl;
+
+    std::cout << "More: " << (a > b) << std::endl;
+
 }
